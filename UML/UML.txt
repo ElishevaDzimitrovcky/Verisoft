@@ -1,0 +1,87 @@
+<<abstract>> Person
+---------------------
+- name: String
+- age: int
+# address: String
+---------------------
++ Person(name: String, age: int, address: String)
++ getName(): String
++ getAge(): int
++ getAddress(): String
++ getRole(): String {abstract}
+
+
+Professor
+---------------------
+- department: String
+---------------------
++ Professor(name: String, age: int, address: String, department: String)
++ getRole(): String
++ teach(): String
+
+
+
+Student
+---------------------
+- studentId: String
+---------------------
++ Student(name: String, age: int, address: String, studentId: String)
++ getRole(): String
++ study(): String
+
+
+
+<<interface>> Course
+---------------------
++ getCourseName(): String
++ getCourseCode(): String
++ addParticipant(person: Person): void
++ getParticipants(): List<Person>
+
+
+
+
+UndergraduateCourse
+---------------------------
+- courseName: String
+- courseCode: String
+- participants: List<Person>
+---------------------------
++ UndergraduateCourse(courseName: String, courseCode: String)
++ getCourseName(): String
++ getCourseCode(): String
++ addParticipant(person: Person): void
++ getParticipants(): List<Person>
+
+
+
+GraduateCourse
+---------------------------
+- courseName: String
+- courseCode: String
+- researchFocus: String
+- participants: List<Person>
+---------------------------
++ GraduateCourse(courseName: String, courseCode: String, researchFocus: String)
++ getCourseName(): String
++ getCourseCode(): String
++ addParticipant(person: Person): void
++ getParticipants(): List<Person>
++ getResearchFocus(): String
+
+
+
+
+University
+---------------------------
++ main(args: String[]): void
+
+
+
+
+
+
+
+
+
+
